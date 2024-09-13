@@ -1,0 +1,23 @@
+"""<link to problem description>"""
+import pytest
+from utils.hints import show_file_hints
+
+
+def <func_name>():
+    # put your code here :)
+
+
+if __name__ == '__main__':
+    example_input = <data>
+
+    # Check how your function work
+    print(flattening_json(example_input))
+
+    # Take some hints
+    # show_file_hints(hint_level=1, show_all=False)
+
+    # Test your example_input
+    # pytest.main(["-v", "test/<test_file_name>.py::<test_example_func_name>"])
+
+    # Full test
+    # pytest.main(["-v", "test/<test_file_name>.py::<test_full_func__name>"])

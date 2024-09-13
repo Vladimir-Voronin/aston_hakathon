@@ -22,6 +22,9 @@ def show_file_hints(hint_level=1, show_all=False):
             break
         print(f'\tLevel {cur_level + 1}: {hint}', end='\n\n')
 
+    else:
+        print(f'\tЭто была последняя подсказка.')
+
 
 if __name__ == '__main__':
     pass

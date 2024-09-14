@@ -2,6 +2,8 @@
 import json
 import inspect
 from pathlib import Path
+from colorama import Fore, Style, init
+init()
 
 
 def show_file_hints(hint_level=1, show_all=False):
@@ -20,10 +22,10 @@ def show_file_hints(hint_level=1, show_all=False):
     for cur_level, hint in enumerate(hints):
         if cur_level == hint_level:
             break
-        print(f'\tLevel {cur_level + 1}: {hint}', end='\n\n')
+        print(Fore.YELLOW + f'\tLevel {cur_level + 1}: {hint}', end='\n\n' + Style.RESET_ALL)
 
     else:
-        print(f'\tЭто была последняя подсказка.')
+        print(Fore.RED + '\tЭто была последняя подсказка.' + Style.RESET_ALL)
 
 
 if __name__ == '__main__':

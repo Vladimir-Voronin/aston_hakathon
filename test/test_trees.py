@@ -1,6 +1,8 @@
 """Testing functions related to tree problems"""
 
 from trees_1_flattening_json import flattening_json
+from answers.answer_trees_3 import create_manager_tree as create_manager_tree_solution
+from trees_3_managers_tree import create_manager_tree
 
 
 def test_trees_1_flattening_json_example():
@@ -116,3 +118,75 @@ def test_1_flattening_json_full():
     test_trees_1_flattening_json_example()
     assert flattening_json(input_1) == output_1
     assert flattening_json(input_2) == output_2
+
+
+def test_trees_3_managers_tree_example():
+    """Recursive test, comparing trainee func implementation with my implementation."""
+
+    def check_eq(node_check, node_standard):
+        assert len(node_check.children) == len(
+            node_standard.children), (
+            f"In node with id {node_check.employee_obj.id} the length of children list is "
+            f"not right.")
+        if not node_check.children:
+            return
+        children_1 = sorted(node_check.children, key=lambda x: x.employee_obj.id)
+        children_2 = sorted(node_standard.children, key=lambda x: x.employee_obj.id)
+        for child_1, child_2 in zip(children_1, children_2):
+            assert child_1.employee_obj == child_2.employee_obj, (
+                f"Some of children in node with id"
+                f" {node_check.employee_obj.id} are "
+                f"not right")
+            check_eq(child_1, child_2)
+
+    example_input = [
+        {
+            "id": 7,
+            "name": "Krisa",
+            "salary": 90000,
+            "manager_id": 4
+        },
+        {
+            "id": 1,
+            "name": "Gnida",
+            "salary": 50000,
+            "manager_id": 2
+        },
+        {
+            "id": 2,
+            "name": "Tvar`",
+            "salary": 100000,
+            "manager_id": None
+        },
+        {
+            "id": 3,
+            "name": "Yrod",
+            "salary": 40000,
+            "manager_id": 1
+        },
+        {
+            "id": 4,
+            "name": "Mraz'",
+            "salary": 60000,
+            "manager_id": 1
+        },
+        {
+            "id": 5,
+            "name": "Chert",
+            "salary": 50000,
+            "manager_id": 4
+        },
+        {
+            "id": 6,
+            "name": "Paskuda)",
+            "manager_id": 4
+        },
+        {
+            "id": 8,
+            "name": "Chudovishe",
+            "manager_id": 5
+        },
+    ]
+    root_check = create_manager_tree(example_input)
+    root_standard = create_manager_tree_solution(example_input)
+    check_eq(root_check, root_standard)

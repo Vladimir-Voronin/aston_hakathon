@@ -13,8 +13,8 @@ def show_file_hints(hint_level=1, show_all=False):
     key = full_path.name.removesuffix('.py')
     with open(r'data/hints.json', 'r', encoding='utf-8') as hint_file:
         hints_json = json.load(hint_file)
-    hints = hints_json[key]
-    print("Your hint(s):")
+    hints = hints_json[key]["hints"]
+    print("\nYour hint(s):")
     if show_all:
         hint_level = float('inf')
     for cur_level, hint in enumerate(hints):

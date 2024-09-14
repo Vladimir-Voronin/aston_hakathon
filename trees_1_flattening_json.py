@@ -37,7 +37,7 @@ if __name__ == '__main__':
         }
     }
 
-    # Check how your function work
+    # Check what your function returns
     print(flattening_json(example_input))
 
     # Take some hints

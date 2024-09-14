@@ -79,7 +79,7 @@ if __name__ == '__main__':
         },
     ]
 
-    # Check how your function work
+    # Check what your function returns
     print(create_manager_tree(example_input))
 
     # Take some hints

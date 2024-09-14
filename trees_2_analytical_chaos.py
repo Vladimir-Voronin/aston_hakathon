@@ -18,7 +18,7 @@ def find_real_and_fake_csv() -> tuple[list[Path], list[Path]]:
 
 
 if __name__ == '__main__':
-    # Check how your function work
+    # Check what your function returns
     print(find_real_and_fake_csv())
 
     # Take some hints

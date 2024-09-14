@@ -11,8 +11,8 @@ def <func_name>():
 if __name__ == '__main__':
     example_input = <data>
 
-    # Check how your function work
-    print(flattening_json(example_input))
+    # Check what your function returns
+    print(f'Return value: {flattening_json(example_input)}')
 
     # Take some hints
     # show_file_hints(hint_level=1, show_all=False)

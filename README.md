@@ -2,7 +2,7 @@
 ## Установка
 ### ШАГ 1. Копирование и создание виртуального окружения
 ```sh
-git clone https://github.com/username/repository.git
+git clone https://github.com/Vladimir-Voronin/aston_hakathon
 cd aston_hakathon
 python -m venv venv
 ```

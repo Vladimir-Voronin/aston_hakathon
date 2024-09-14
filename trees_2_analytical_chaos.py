@@ -12,7 +12,7 @@ def find_real_and_fake_csv() -> tuple[list[Path], list[Path]]:
     real_csv_paths = []
     fake_csv_paths = []
 
-    # put your code here :)
+    # Пиши код сюда
 
     return real_csv_paths, fake_csv_paths
 

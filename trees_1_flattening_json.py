@@ -6,7 +6,8 @@ from utils.hints import show_file_hints
 
 
 def flattening_json(json_obj: dict) -> dict:
-    pass
+    """Сглаживаю json ༼ °͜° ༽"""
+    # Пиши код сюда
 
 
 if __name__ == '__main__':
@@ -40,10 +41,10 @@ if __name__ == '__main__':
     print(flattening_json(example_input))
 
     # Take some hints
-    show_file_hints(hint_level=1, show_all=False)
+    # show_file_hints(hint_level=1, show_all=False)
 
     # Test your example_input
-    pytest.main(["-v", "test/test_trees.py::test_trees_1_flattening_json_example"])
+    # pytest.main(["--color=yes", "-v", "test/test_trees.py::test_trees_1_flattening_json_example"])
 
     # Full test
-    pytest.main(["-v", "test/test_trees.py::test_1_flattening_json_full"])
+    # pytest.main(["--color=yes", "-v", "test/test_trees.py::test_1_flattening_json_full"])

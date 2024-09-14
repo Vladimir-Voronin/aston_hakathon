@@ -1,8 +1,11 @@
+"""Testing functions related to tree problems"""
+
 from trees_1_flattening_json import flattening_json
 
 
 def test_trees_1_flattening_json_example():
-    input = {
+    """Small test based on one input."""
+    data_input = {
         "id": 1,
         "name": "Vova",
         "department": {
@@ -40,7 +43,7 @@ def test_trees_1_flattening_json_example():
         "department_projects_2_tech_stack_2": "Oracle",
         "department_projects_2_tech_stack_3": "WPF"
     }
-    result = flattening_json(input)
+    result = flattening_json(data_input)
     assert isinstance(result,
                       dict), (f'Возвращаемое значение должно быть типа dict. '
                               f'В вашем случае return_val == {type(result)}')
@@ -48,6 +51,7 @@ def test_trees_1_flattening_json_example():
 
 
 def test_1_flattening_json_full():
+    """Full test based on several inputs."""
     input_1 = {}
     output_1 = {}
     input_2 = {
